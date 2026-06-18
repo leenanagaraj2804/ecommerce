@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Store</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>My E-Commerce Store</h1>
+    <p>Online Shopping Application</p>
+</header>
+
+<div class="container">
+
+    <div class="search-box">
+        <input type="text" id="searchInput"
+        placeholder="Search Products..."
+        onkeyup="searchProducts()">
+    </div>
+
+    <div class="products">
+
+        <div class="product-card">
+           <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500" alt="Wireless Mouse">
+            <h3>Wireless Mouse</h3>
+            <p class="category">Electronics</p>
+            <p class="price">₹599</p>
+            <button onclick="addToCart('Wireless Mouse',599)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+           <img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=500" alt="Keyboard">
+            <h3>Keyboard</h3>
+            <p class="category">Electronics</p>
+            <p class="price">₹999</p>
+            <button onclick="addToCart('Keyboard',999)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Headphones">
+            <h3>Headphones</h3>
+            <p class="category">Audio</p>
+            <p class="price">₹1499</p>
+            <button onclick="addToCart('Headphones',1499)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500" alt="Smart Watch">
+            <h3>Smart Watch</h3>
+            <p class="category">Wearables</p>
+            <p class="price">₹2499</p>
+            <button onclick="addToCart('Smart Watch',2499)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500" alt="USB Hub">
+            <h3>USB Hub</h3>
+            <p class="category">Accessories</p>
+            <p class="price">₹799</p>
+            <button onclick="addToCart('USB Hub',799)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+           <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=500" alt="Laptop Stand">
+            <h3>Laptop Stand</h3>
+            <p class="category">Accessories</p>
+            <p class="price">₹1299</p>
+            <button onclick="addToCart('Laptop Stand',1299)">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <div class="cart">
+        <h2>
+            Shopping Cart
+            (<span id="itemCount">0</span>)
+        </h2>
+
+        <ul id="cartItems"></ul>
+
+        <h3>Total: ₹<span id="total">0</span></h3>
+
+        <button class="clear-btn" onclick="clearCart()">
+            Clear Cart
+        </button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
